@@ -41,4 +41,10 @@ public class TestGreeter {
 
     assertThat(greeter.greet(someone).length(), is(greaterThan(someone.length())));
   }
+
+  @Test
+  public void creatingDummyTestCaseForCheckingTheTestResultTrend() {
+    String dummyCase = "This is a Dummy Test case";
+    assertThat(dummyCase).isNotNull();
+  }
 }
