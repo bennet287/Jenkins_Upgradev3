@@ -8,7 +8,7 @@ import org.mockito.internal.matchers.LessThan;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.Matchers.greaterThan;
 import static org.hamcrest.Matchers.lessThan;
-import static org.assertj.core.api.Assertions.*;
+import static org.junit.Assert.*;
 import static org.junit.matchers.JUnitMatchers.containsString;
 
 public class TestGreeter {
@@ -45,6 +45,6 @@ public class TestGreeter {
   @Test
   public void creatingDummyTestCaseForCheckingTheTestResultTrend() {
     String dummyCase = "This is a Dummy Test case";
-    assertThat(dummyCase).isNotNull();
+    assertThat(dummyCase != null, is(true)); // Using Hamcrest assertion
   }
 }
